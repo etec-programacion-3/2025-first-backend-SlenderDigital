@@ -40,9 +40,6 @@ Implementación del sistema de préstamos, incluyendo:
 - Documentar la API
 
 ## Tecnologías
-Los estudiantes pueden elegir entre las siguientes tecnologías:
-- Node.js + Express + Sequelize + SQLite
-- Python + Flask + SQLAlchemy + SQLite
 - Python + FastAPI + Tortoise ORM + SQLite
 
 Nota: Se debe utilizar un ORM (Object-Relational Mapping) para interactuar con la base de datos. No se permite el uso de SQL nativo.
