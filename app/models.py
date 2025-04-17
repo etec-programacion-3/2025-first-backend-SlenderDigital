@@ -1,10 +1,22 @@
-from tortoise import fields, Model
+"""
+This module contains the base models for the endpoints.
+These models are used for request and response validation.
+The BookIn model is used for creating and updating books,
+while the BookOut model is used for returning book data.
+"""
 
-class Book(Model):
-    id = fields.IntField(pk=True)
-    title = fields.CharField(max_length=255)
-    author = fields.CharField(max_length=255)  
-    isbn = fields.CharField(max_length=13, unique=True)
-    category = fields.CharField(max_length=100)
-    status = fields.CharField(max_length=50) 
-    creation_date = fields.DatetimeField(auto_now_add=True)
+from pydantic import BaseModel
+
+class BookIn(BaseModel):
+    title: str
+    author: str
+    isbn: str
+    category: str
+    status: str
+
+class BookOut(BookIn):
+    id: int
+    creation_date: str
+
+    class Config:
+        orm_mode = True
