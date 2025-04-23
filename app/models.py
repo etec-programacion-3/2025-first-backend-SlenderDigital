@@ -6,6 +6,7 @@ while the BookOut model is used for returning book data.
 """
 
 from pydantic import BaseModel
+from datetime import datetime
 
 class BookIn(BaseModel):
     title: str
@@ -16,7 +17,7 @@ class BookIn(BaseModel):
 
 class BookOut(BookIn):
     id: int
-    creation_date: str
+    creation_date: datetime  # Change from str to datetime
 
     class Config:
         orm_mode = True
