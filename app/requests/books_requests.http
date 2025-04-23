@@ -9,11 +9,11 @@ POST http://127.0.0.1:8000/books
 Content-Type: application/json
 
 {
-  "title": "test2",
-  "author": "George Orwell",
-  "isbn": "13",  
-  "category": "Fiction",
-  "status": "available"
+    "title": "test2",
+    "author": "George Orwell",
+    "isbn": "9780451524935",  
+    "category": "Fiction",
+    "status": "available"
 }
 
 ### Update a book
@@ -21,26 +21,24 @@ PUT http://127.0.0.1:8000/books/4
 Content-Type: application/json
 
 {
-  "title": "updating test1",
-  "author": "George Orwell",
-  "isbn": "12",  
-  "category": "changing Fiction to Science",
-  "status": "available"
+    "title": "updating test1",
+    "author": "George Orwell",
+    "isbn": "9780452284241",  
+    "category": "changing Fiction to Science",
+    "status": "available"
 }
 
 ### Delete a book
-DELETE http://127.0.0.1:8000/books/5 
-
-
+DELETE http://127.0.0.1:8000/books/5
 
 ### Search by title
-GET http://127.0.0.1:8000/book/find?title=updating%20test1
+GET http://127.0.0.1:8000/books/find?title=updating%20test1
 
 ### Search by author
-GET http://127.0.0.1:8000/book/find?author=George%20Orwell
+GET http://127.0.0.1:8000/books/find?author=George%20Orwell
 
-# Search by category
-GET http://127.0.0.1:8000/book/find?category=Fiction
+### Search by category
+GET http://127.0.0.1:8000/books/find?category=Fiction
 
-# Multiple parameters
-GET http://127.0.0.1:8000/book/find?author=George Orwell&category=Fiction
+### Multiple parameters
+GET http://127.0.0.1:8000/books/find?author=George%20Orwell&category=Fiction
