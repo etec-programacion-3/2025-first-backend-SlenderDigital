@@ -15,3 +15,13 @@ class Book(Model):
     category = fields.CharField(max_length=100)
     status = fields.CharField(max_length=50) 
     creation_date = fields.DatetimeField(auto_now_add=True)
+
+class User(Model):
+    id = fields.IntField(pk=True)
+    name = fields.CharField(max_length=100)
+    last_name = fields.CharField(max_length=100)
+    email = fields.CharField(max_length=255, unique=True)
+    password = fields.CharField(max_length=255)
+    rol = fields.CharField(max_length=50)  # admin, usuario
+    active = fields.BooleanField(default=True)
+    creation_date = fields.DatetimeField(auto_now_add=True)

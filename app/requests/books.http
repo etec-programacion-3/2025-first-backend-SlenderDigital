@@ -1,0 +1,44 @@
+### List all books
+GET http://127.0.0.1:8000/books
+
+### Get a book by ID
+GET http://127.0.0.1:8000/books/1
+
+### Create a new book
+POST http://127.0.0.1:8000/books
+Content-Type: application/json
+
+{
+  "title": "The Hobbit 2",
+  "author": "J.R.R. Tolkien",
+  "isbn": "9780547928228",
+  "category": "Fantasy",
+  "status": "available"
+}
+
+### Update a book
+PUT http://127.0.0.1:8000/books/1
+Content-Type: application/json
+
+{
+  "title": "The Hobbit: An Unexpected Journey",
+  "author": "J.R.R. Tolkien",
+  "isbn": "9780547928227",
+  "category": "Fantasy",
+  "status": "checked out"
+}
+
+### Delete a book
+DELETE http://127.0.0.1:8000/books/1
+
+### Search books by title
+GET http://127.0.0.1:8000/books/find?title=Hobbit
+
+### Search books by author
+GET http://127.0.0.1:8000/books/find?author=Tolkien
+
+### Search books by category
+GET http://127.0.0.1:8000/books/find?category=Fantasy
+
+### Search books by multiple parameters
+GET http://127.0.0.1:8000/books/find?author=Tolkien&category=Fantasy
