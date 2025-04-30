@@ -16,7 +16,6 @@ class Book(Model):
     status = fields.CharField(max_length=50) 
     creation_date = fields.DatetimeField(auto_now_add=True)
 
-# Ejemplo con Tortoise ORM
 class User(Model):
     id = fields.IntField(pk=True)
     name = fields.CharField(max_length=100)

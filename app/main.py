@@ -25,3 +25,7 @@ register_tortoise(
 # Import and include the books router
 from app.routes.books import router as books_router
 app.include_router(books_router)
+
+@app.get("/")
+def read_root():
+    return {"Hello": "World"}

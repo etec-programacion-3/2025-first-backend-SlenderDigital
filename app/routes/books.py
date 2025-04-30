@@ -3,7 +3,7 @@ from tortoise.contrib.fastapi import DoesNotExist
 from tortoise.exceptions import IntegrityError
 from typing import List, Optional
 from app.database.db_models import Book
-from app.shemas import BookIn, BookOut
+from app.schemas import BookIn, BookOut
 
 router = APIRouter(prefix="/books", tags=["books"])
 

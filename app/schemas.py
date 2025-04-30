@@ -17,10 +17,10 @@ class BookIn(BaseModel):
 
 class BookOut(BookIn):
     id: int
-    creation_date: datetime  # Change from str to datetime
+    creation_date: datetime
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 class UserBase(BaseModel):
     name: str
@@ -43,4 +43,4 @@ class UserOut(UserBase):
     creation_date: datetime
 
     class Config:
-        orm_mode = True
+        from_attributes = True
