@@ -1,0 +1,40 @@
+### Register a new user
+POST http://127.0.0.1:8000/auth/registro
+Content-Type: application/json
+
+{
+    "name": "Bautista",
+    "last_name": "Prieto",
+    "email": "bauti@example.com",
+    "password": "test1234",
+    "rol": "admin",
+    "active": true
+}
+
+### Login (get JWT token)
+POST http://127.0.0.1:8000/auth/login
+Content-Type: application/x-www-form-urlencoded
+
+username=bauti@example.com&password=test1234
+
+### List all users (admin only)
+GET http://127.0.0.1:8000/usuarios
+Authorization: Bearer {{jwt_token}}
+
+### Get user profile (self or admin)
+GET http://127.0.0.1:8000/usuarios/1
+Authorization: Bearer {{jwt_token}}
+
+### Update user profile (self or admin)
+PUT http://127.0.0.1:8000/usuarios/1
+Authorization: Bearer {{jwt_token}}
+Content-Type: application/json
+
+{
+    "name": "Bautista",
+    "last_name": "Prieto",
+    "email": "bauti@example.com",
+    "password": "newpassword123",
+    "rol": "admin",
+    "active": true
+}
