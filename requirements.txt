@@ -4,14 +4,7 @@ tortoise-orm==0.25.0
 aiosqlite==0.18.0
 python-jose[cryptography]==3.3.0
 passlib[bcrypt]==1.7.4
-<<<<<<< HEAD
 pydantic==2.11
-email-validator=2.1.1
-=======
-<<<<<<< HEAD
+email-validator==2.1.1
+python-multipart
 pydantic==2.11
-=======
-pydantic==1.10.12
-email-validator==1.1.2
->>>>>>> c90acba (user models and schemas created, project refactorized and database re-initializez)
->>>>>>> 10-user-model-and-database-setup

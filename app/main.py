@@ -22,9 +22,11 @@ register_tortoise(
     add_exception_handlers=True,
 )
 
-# Import and include the books router
+# Import and include the routers
 from app.routes.books import router as books_router
+from app.routes.users import router as users_router
 app.include_router(books_router)
+app.include_router(users_router)
 
 @app.get("/")
 def read_root():
